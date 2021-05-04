@@ -28,14 +28,7 @@ export class CompetitionsComponent implements OnInit {
   // Get Competitions list
   loadCompetitions() {
     return this.service.getCompetitions().subscribe(data => {
-
       this.Competitions= data.competitions.filter( (item:any) => [2000, 2001, 2002, 2003, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2021].includes(item.id))
-    
-      console.log(this.Competitions)
-      // const competitions_with_slug = competitions.map((item:any)=> ({...item, slug: item.name.replace(' ','-').toLowerCase()}))
-      // console.log(competitions_with_slug)
-      // this.Competitions = competitions_with_slug
-    
     })
   }
 

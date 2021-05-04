@@ -32,7 +32,6 @@ export class MatchDetailComponent implements OnInit {
   loadMatchDetails() {
     return this.service.getMatchDetail(this.state.id).subscribe(data => {
       this.MatchDetail = data.match;
-      console.log(data.match)
     })
   }
 
