@@ -1,0 +1,28 @@
+
+<div class="container">
+    <div class="container-flex">
+        <div class='match-item'>
+            <div *ngIf="MatchDetail.status != 'SCHEDULED'; else SCHEDULED">
+                <div class="match-heading">
+                    <p>{{MatchDetail.homeTeam.name}}  <span class="meta score">{{MatchDetail.score.fullTime.homeTeam}}-{{MatchDetail.score.fullTime.awayTeam}}</span>  {{MatchDetail.awayTeam.name}}</p>
+                    <span class="meta">{{MatchDetail.status==='IN_PLAY'?'LIVE':'HT'}}</span>
+                </div>
+            </div>
+            <ng-template #SCHEDULED>
+                <div class="match-heading">
+                    <p>{{MatchDetail.homeTeam.name}} vs {{MatchDetail.awayTeam.name}}</p>
+                    <span class="meta">{{ MatchDetail.utcDate | timeToGo }}</span>
+                </div>
+            </ng-template>
+            <div class="match-detail">
+                <p>Date: {{ MatchDetail.utcDate | dayCheck}} </p>
+                <p>Competition: {{MatchDetail.competition.name}} </p>
+                <p>Venue: {{MatchDetail.venue}} </p>
+                <p *ngIf="MatchDetail.referees.length">Referee: {{MatchDetail.referees[0].name}} </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,24 @@
+ul {
+    display: flex;
+    margin: 0.75rem;
+    height: 2rem;
+  }
+  
+  
+  
+  
+  a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 2rem;
+      cursor:pointer;
+
+  }
+  
+ 
+  .selected {
+    background: #303030;
+    color: #fff;
+    border-radius: 9999px;
+  }

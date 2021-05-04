@@ -1,0 +1,35 @@
+
+
+<div class='container'>
+    <div class='container-flex'>
+        <div *ngIf="paginatedMatches.length; else elseBlock" >
+        <div *ngFor="let match of paginatedMatches" class='match-fixture-box'>
+        
+            <div *ngIf="match.status != 'SCHEDULED'; else SCHEDULED" class='match-fixture'>
+                    <a   [routerLink]="['/', code, match.slug]" [state]="{ id:match.id}">
+                        {{match.homeTeam.name}} <span class="meta score">{{match.score.fullTime.homeTeam}} - {{match.score.fullTime.awayTeam}}</span> {{match.awayTeam.name}}
+                    </a>
+                    <p class="meta status">{{match.status==='IN_PLAY'?'LIVE':'HT'}}</p>
+            
+                </div>
+                
+                <ng-template #SCHEDULED >
+                    <div class='match-fixture'>
+                        <span class='meta date'>{{ match.utcDate | timeToGo }}</span>
+                        <a  [routerLink]="['/', code, match.slug]" [state]="{ id:match.id}">
+                            {{match.homeTeam.name}} <span class="meta">? - ?</span> {{match.awayTeam.name}}
+                        </a>
+                        <span class='meta date'>{{ match.utcDate | dayCheck }}</span>
+                    </div>  
+                </ng-template>
+                
+           
+        </div>
+        <div *ngIf = "isLoaded">
+            <app-paginate [itemsCount]="itemsCount" [pageSize]="pageSize" [currentPage]="currentPage" (onPageChange)="setCurrentPage($event)">
+            </app-paginate>
+        </div>
+    </div>
+    <ng-template #elseBlock><h4 >No matches.</h4></ng-template>
+</div>
+</div>

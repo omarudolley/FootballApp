@@ -1,0 +1,55 @@
+
+a {
+  display: flex;
+}
+  
+
+
+.container {
+    display: flex;
+    max-width: 815px;
+    margin: auto;
+}
+ 
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+
+
+.match-fixture-box{
+  color: white;
+  margin: auto;
+  margin-bottom: 10px;
+  max-width: 728px;
+  width: 100%;
+}
+  
+
+.match-fixture {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  margin-bottom: 1px;
+  font-size: 1.2rem;
+  font-weight: normal;
+  background: #303030;
+  padding: 0.5em;
+  align-items: center;
+  
+}
+
+
+
+
+.meta {
+  padding:0.25rem 0.75rem;
+  font-size: 0.875rem;
+ line-height: 1.25rem;
+ }
+ 
+
+

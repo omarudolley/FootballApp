@@ -1,0 +1,11 @@
+<nav *ngIf="pagesCount != 1" >
+        <ul> 
+            <li *ngFor="let page of pages">
+                    <a 
+                    [ngClass]="{'selected': page === currentPage}" 
+                    (click)="changePage(page)"
+                    >{{page}}
+                    </a> 
+            </li>
+        </ul>
+</nav>
