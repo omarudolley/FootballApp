@@ -5,8 +5,6 @@ ul {
   }
   
   
-  
-  
   a {
       display: flex;
       justify-content: center;
@@ -22,3 +20,5 @@ ul {
     color: #fff;
     border-radius: 9999px;
   }
+
+  

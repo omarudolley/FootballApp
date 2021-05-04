@@ -52,3 +52,17 @@
    
   
   
+   @media (max-width: 600px) {
+
+    .match-detail{
+      font-size: 0.875rem;
+    }
+
+    .match-heading{
+      font-size: 0.875rem;
+    }
+  
+    .meta{
+      font-size: 0.75rem;
+    }
+  }

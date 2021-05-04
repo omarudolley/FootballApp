@@ -53,3 +53,14 @@ a {
  
 
 
+ @media (max-width: 600px) {
+
+  .match-fixture{
+    font-size: 0.875rem;
+  }
+
+
+  .meta{
+    font-size: 0.75rem;
+  }
+}

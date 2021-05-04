@@ -39,3 +39,8 @@ a {
 
 
 
+@media (max-width: 600px) {
+  .league-detail {
+    font-size: 0.875rem;
+  }
+}
