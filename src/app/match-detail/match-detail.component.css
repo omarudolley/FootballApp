@@ -55,14 +55,18 @@
    @media (max-width: 600px) {
 
     .match-detail{
-      font-size: 0.875rem;
+      font-size: 0.688rem;
     }
 
     .match-heading{
-      font-size: 0.875rem;
+      font-size: 0.688rem;
     }
   
     .meta{
-      font-size: 0.75rem;
+      font-size: 0.6rem;
+    }
+
+    .container-flex {
+      flex-direction: column;
     }
   }

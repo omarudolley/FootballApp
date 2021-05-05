@@ -18,7 +18,7 @@ export class TimeToGoPipe implements PipeTransform {
         const date = new Date(value)
         const   diff = (( date.getTime() - (new Date()).getTime()) / 1000)
         const hrdiff = Math.floor(diff / 3600);
-        return `Start In ${hrdiff}'`
+        return `Starts In ${hrdiff}h`
     }else{
       return datePipe.transform(value, 'h:mm a'); 
     }

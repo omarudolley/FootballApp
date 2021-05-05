@@ -21,7 +21,7 @@ export class DataService {
   // Http Options
   httpOptions = {
     headers: new HttpHeaders({
-      'X-Auth-Token':'522da1f154294b7aa61ab4f1738704f5'
+      'X-Auth-Token': '522da1f154294b7aa61ab4f1738704f5'
     })
   }  
 
@@ -44,7 +44,7 @@ export class DataService {
     )
   }  
 
-  // HttpClient API get() method => Fetch matches 
+  // HttpClient API get() method => Fetch live matches 
   getLiveMatches(code:string):Observable<any>  {
     return this.http.get(`${this.apiURL}competitions/${code}/matches?status=LIVE`,this.httpOptions)
     .pipe(
@@ -53,6 +53,7 @@ export class DataService {
     )
   }  
 
+    // HttpClient API get() method => Fetch match detail
   getMatchDetail(id:number):Observable<any>{
     return this.http.get(`${this.apiURL}matches/${id}`, this.httpOptions)
     .pipe(
